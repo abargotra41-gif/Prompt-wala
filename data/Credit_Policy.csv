@@ -1,0 +1,14 @@
+Policy_Item,Rule_or_Definition
+Policy purpose,Illustrative demo policy for order-level credit decisions; not validated underwriting.
+Default scenario order value (INR),20000
+Tier 1 - 14-day credit,On-time payment rate >= 90%; average days late <= 3; overdue balance <= ₹500; established history; positive available credit.
+Tier 2 - 7-day credit,On-time payment rate >= 75%; average days late <= 7; overdue balance <= 10% of credit limit; established history; positive available credit.
+Hard guardrail: new store,"If payment history is missing, recommend COD/prepaid until at least 3 completed orders have been reviewed. Missing history is not the same as bad payment behaviour."
+Hard guardrail: overdue balance,"If overdue balance >= ₹5,000, pause automated credit and route to COD/prepaid or human review."
+Hard guardrail: unknown overdue,"If overdue balance is unknown, do not extend automated credit until verified."
+Hard guardrail: no credit limit,"If approved credit limit <= ₹0, require upfront payment unless a human approves a limit."
+Available credit (simplified demo formula),"max(0, credit limit - overdue balance). Production should subtract all outstanding credit exposure and pending orders, not just overdue balance."
+Order-level credit amount,"min(order value, available credit). Any amount above approved credit is required upfront."
+Credit_Period_Granted_By_Policy,1 only when the policy grants a positive 7- or 14-day credit amount; otherwise 0.
+Human review,"Required for COD/review cases, partial credit, credit holds, new stores, missing data or exceptions."
+Important limitation,This deterministic policy is separate from the ML prediction. ML risk scores must never override hard guardrails. All records and labels are synthetic.

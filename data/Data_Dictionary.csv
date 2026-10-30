@@ -1,0 +1,21 @@
+Sheet_Name,Purpose,Usage_Notes
+Read_Me,Workbook guide and limitations,Read before modeling; all records are synthetic.
+Catalogue,Product source of truth,Fictional illustrative prices; confirm aliases and conversions.
+Stores,Fictional store profiles with categorical and numeric synthetic payment features,"Payment fields are synthetic. Numeric features can be used for a classroom modeling exercise; target label is illustrative, not validated."
+Order_History,One row per historical order,Join to Order_Lines using Order_ID.
+Order_Lines,One row per SKU line,Use to derive store-SKU patterns.
+WhatsApp_Messages,40 test messages with expected labels,Use for manual LLM/RAG evaluation; starter set only.
+Reorder_Features,Store/SKU features and target,Starter synthetic modeling table; use time-based evaluation.
+Test_Cases,Demo and robustness scenarios,Use as test checklist.
+Payment_Behaviour_History,Synthetic store payment pattern,"Illustrative category such as consistently on time, mixed, frequent late, or no established history. Not derived from actual payment transactions."
+Payment_Leniency_Recommendation,Suggested payment terms for review,"Illustrative policy recommendation based on the synthetic payment category. Apply only after checking overdue balances, credit limits, order value and company policy; human approval required."
+On_Time_Payment_Rate,Numeric payment feature,Value from 0 to 1; e.g. 0.95 means 95% of payments on time. Blank means no established history.
+Average_Days_Late,Numeric payment feature,Average number of days late for payments; blank means no established history.
+Overdue_Balance_INR,Numeric payment feature,Illustrative overdue balance in INR.
+Credit_Limit_INR,Numeric policy feature,Illustrative approved credit limit in INR; zero indicates no credit limit in this synthetic example.
+Payment_Leniency_Eligible_Target,Binary target (0/1),"1 = synthetic example label eligible for payment leniency; 0 = not eligible. Use only for classroom modeling, not real decisions."
+Stores,Store master and payment-leniency modelling dataset with 300 synthetic store records.,"Contains categorical payment history, recommendation, numeric payment features, and binary target Payment_Leniency_Eligible_Target. All 300 records are synthetic/illustrative; use for coursework only."
+Stores,Payment_Leniency_Eligible_Target,"Binary illustrative target: 1 = labelled eligible, 0 = labelled not eligible. Labels are synthetic and are not validated outcomes. Do not use to grant real credit."
+Credit_Policy,Explicit illustrative business rules for order-level credit decisions.,Editable policy assumptions and hard guardrails. Keep deterministic policy separate from ML model output; human review required for exceptions.
+Order_Credit_Scenarios,"Order-level outputs for a hypothetical ₹20,000 order for each of 300 stores.","Shows available-credit proxy, policy tier, credit granted flag, recommended days, credit amount, upfront amount, explanation and review flag."
+Stores,Order-level credit policy guardrail output columns.,New columns include order-level decision outputs. Credit_Period_Granted_By_Policy is deterministic and must not be confused with Payment_Leniency_Eligible_Target (synthetic ML label).

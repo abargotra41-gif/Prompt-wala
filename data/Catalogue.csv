@@ -1,0 +1,25 @@
+SKU,Product_Name,Brand,Aliases_Synonyms,Category,Order_Unit,Unit_Price_INR,Units_Per_Case
+SKU001,Fortune Sunflower Oil 1L,Fortune,fortune oil;fortune;sunflower oil,Oil,Bottle,150,12
+SKU002,Fortune Sunflower Oil 5L,Fortune,fortune oil 5l;fortune 5 litre,Oil,Can,690,4
+SKU003,Maggi Noodles 70g,Maggi,maggi;magi;noodles,Instant Noodles,Packet,14,96
+SKU004,Parle-G Biscuits 100g,Parle-G,parle g;parle-g;parleg,Biscuits,Packet,10,120
+SKU005,Britannia Good Day 100g,Britannia,good day;goodday;britannia goodday,Biscuits,Packet,20,80
+SKU006,Tata Salt 1kg,Tata,tata salt;salt 1kg,Staples,Packet,28,60
+SKU007,Aashirvaad Atta 5kg,Aashirvaad,atta 5kg;aashirvaad atta,Staples,Bag,275,10
+SKU008,Amul Taaza Milk 500ml,Amul,amul milk;taaza;milk 500ml,Dairy,Pouch,28,100
+SKU009,Amul Butter 100g,Amul,amul butter;butter 100g,Dairy,Pack,58,48
+SKU010,Coca-Cola 750ml,Coca-Cola,coke;coca cola;coke 750,Beverages,Bottle,40,48
+SKU011,Thums Up 750ml,Thums Up,thumsup;thums up,Beverages,Bottle,40,48
+SKU012,Bisleri Water 1L,Bisleri,bisleri;water bottle,Beverages,Bottle,20,72
+SKU013,Surf Excel Detergent 1kg,Surf Excel,surf excel;surf;detergent,Home Care,Pack,150,12
+SKU014,Vim Dishwash Bar 200g,Vim,vim;vim bar;dishwash bar,Home Care,Bar,25,36
+SKU015,Colgate Toothpaste 150g,Colgate,colgate;toothpaste;colgate paste,Personal Care,Tube,95,24
+SKU016,Clinic Plus Shampoo 175ml,Clinic Plus,clinic plus;clinicplus;shampoo,Personal Care,Bottle,95,24
+SKU017,Cadbury Dairy Milk 40g,Cadbury,dairy milk;cadbury chocolate,Confectionery,Bar,45,60
+SKU018,Haldiram's Bhujia 200g,Haldiram's,haldiram bhujia;bhujia;namkeen,Snacks,Pack,55,36
+SKU019,Kurkure Masala Munch 75g,Kurkure,kurkure;masla munch;masala munch,Snacks,Packet,20,60
+SKU020,Dettol Soap 100g,Dettol,dettol;dettol soap;soap,Personal Care,Bar,40,48
+SKU021,Nescafe Classic 50g,Nescafe,nescafe;coffee 50g,Beverages,Jar,180,12
+SKU022,Kissan Jam 200g,Kissan,kissan jam;jam 200g,Breakfast,Jar,75,24
+SKU023,Red Label Tea 250g,Brooke Bond,red label;red label tea;tea 250g,Beverages,Pack,135,18
+SKU024,Dabur Honey 250g,Dabur,dabur honey;honey 250g,Breakfast,Bottle,120,18

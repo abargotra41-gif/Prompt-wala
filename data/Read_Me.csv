@@ -1,0 +1,33 @@
+Topic,Instructions
+Purpose,Starter synthetic workbook for Project 2: AI-Powered Kirana Ordering Assistant.
+Synthetic data warning,"All store profiles, order histories and messages are fictional, not real distributor data."
+LLM usage,Use WhatsApp_Messages to test extraction; compare outputs with Expected_Output_or_Gold_Label.
+RAG usage,"Use Catalogue as source of truth for product names, aliases, pack sizes and illustrative prices."
+Predictive model,Use Order_History and Order_Lines to derive patterns. Reorder_Features contains starter features and a synthetic target.
+Baseline,Try recommending a SKU if it appeared in at least 2 of the previous 3 orders; compare on later held-out orders.
+Metrics,"Report precision, recall, F1 and confusion matrix for reorder prediction; extraction field accuracy and catalogue/clarification accuracy for LLM/RAG."
+Unit caution,"Peti, dabba, box and carton have no universal conversion. Clarify unless a verified rule exists."
+Price caution,"INR prices are illustrative classroom values, not current market or distributor prices."
+Evaluation caution,Avoid random row-level splits that leak repeated patterns; prefer chronological split or hold out stores.
+Limitations,Synthetic data performance does not prove real-world effectiveness.
+Next step,"Review labels, run tests, measure results and report only actual metrics."
+Payment profile fields,"Stores now includes Payment_Behaviour_History and Payment_Leniency_Recommendation. These profiles are synthetic examples for the academic prototype, not actual payment records."
+Credit / payment policy,"Use payment history as one input to a consistent credit policy. Consider overdue balances, order value, approved credit limit and dispute status. Do not grant credit solely because the AI suggests it."
+New customers,"For stores with no established payment history, use a consistent starter policy such as COD for initial orders and review after a defined number of successfully completed transactions."
+Payment decision guardrail,"Do not automatically approve or deny credit using the synthetic label alone. Show the recommendation for human review; never infer payment behaviour from city, store type or other unrelated attributes."
+Numeric payment features,"Stores now includes numeric payment features for modeling: On_Time_Payment_Rate (0-1), Average_Days_Late, Overdue_Balance_INR, Credit_Limit_INR, and Payment_Leniency_Eligible_Target (0/1). These are fictional synthetic values."
+Target variable warning,"Payment_Leniency_Eligible_Target is a synthetic example label, not a validated credit decision. It is included to demonstrate a modeling pipeline only. Do not use it to make real credit decisions."
+Missing payment history,"Blank values in On_Time_Payment_Rate and Average_Days_Late indicate no established payment history; they are not zero. For modeling, handle missingness explicitly and consider adding a no-history indicator."
+Modeling suggestion,"Use On_Time_Payment_Rate, Average_Days_Late, Overdue_Balance_INR and Credit_Limit_INR as candidate features; use Payment_Leniency_Eligible_Target as the target only for a classroom demonstration. Check for leakage and evaluate with appropriate splits."
+Payment modelling dataset,Stores sheet now contains 300 total store records (20 original synthetic rows + 280 generated synthetic rows).
+Synthetic-data warning,All store payment features and eligibility labels are synthetic and for academic demonstration only; they are not real customer records or validated credit decisions.
+Modeling guidance,"Suggested X features: On_Time_Payment_Rate, Average_Days_Late, Overdue_Balance_INR, Credit_Limit_INR. Suggested y target: Payment_Leniency_Eligible_Target. Use stratified train_test_split(test_size=0.20, random_state=42)."
+Missing values,Blank On_Time_Payment_Rate and Average_Days_Late values indicate no established payment history; do not automatically interpret them as zero.
+Credit policy guardrails,"Credit_Policy sheet contains illustrative Tier 1/Tier 2 rules, hard guardrails, available-credit calculation and human-review requirements."
+Order-level credit scenario,"Stores includes a hypothetical ₹20,000 order decision for each store; Order_Credit_Scenarios contains a focused view."
+Policy result versus ML target,"Credit_Period_Granted_By_Policy is a deterministic policy outcome and is different from Payment_Leniency_Eligible_Target, the synthetic ML target."
+Available credit caution,"Available_Credit_INR_Demo is a simplified proxy: max(0, credit limit minus overdue balance). Production must account for all outstanding exposure and pending orders."
+Human review guardrail,"ML predictions must never override hard policy rules. Review new stores, missing/unknown data, credit holds, partial credit and exceptions."
+Missing values and Store 014,Store 014 has no established payment history and contains missing raw payment features. Raw values are preserved; *_Model_Input columns contain median-filled placeholders and *_Was_Missing flags.
+Model inference guardrail,"Use a fitted sklearn Pipeline with SimpleImputer (fit on training data only) so NaN values are handled consistently. Before model inference, route stores with no payment history to COD/prepaid/manual review; do not let the model override this guardrail."
+Model Feature Guide,See Model_Feature_Guide for the model-ready column names and caveats.

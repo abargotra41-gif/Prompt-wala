@@ -1,0 +1,7 @@
+Item,Guidance
+Purpose,Model-ready copy of numeric features for ML inference; original raw columns remain unchanged.
+Use these columns for prediction,On_Time_Payment_Rate_Model_Input; Average_Days_Late_Model_Input; Overdue_Balance_INR_Model_Input; Credit_Limit_INR_Model_Input
+Missing-value flags,Each *_Was_Missing column is 1 when the original value was missing and 0 otherwise. Has_Payment_History=0 means no established payment history.
+Important,"The *_Model_Input columns use whole-dataset medians for a simple offline/demo fallback. For proper evaluation/training, fit SimpleImputer on the training set only and apply the same fitted pipeline to test and inference data to avoid data leakage."
+Store 014,Store 014 has no established payment history and missing payment features. The imputed values are only placeholders to prevent a NaN crash; the policy must route this store to COD/prepaid/manual review before using the ML prediction.
+Policy vs model,Credit_Period_Granted_By_Policy remains a deterministic policy output. It is not a training feature for predicting the synthetic Payment_Leniency_Eligible_Target.

@@ -1,0 +1,62 @@
+{
+  "sku_rules": {
+    "SKU001": {
+      "case": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_SKU001_CASE", "description": "Standard distributor case: 12 bottles (1L)"},
+      "carton": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_SKU001_CARTON", "description": "Standard distributor carton: 12 bottles (1L)"},
+      "peti": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_SKU001_PETI", "description": "Standard carton (peti): 12 bottles (1L)"},
+      "dhaba": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_SKU001_DHABA", "description": "Standard carton (dhaba): 12 bottles (1L)"},
+      "dhabba": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_SKU001_DHABBA", "description": "Standard carton (dhabba): 12 bottles (1L)"}
+    },
+    "SKU002": {
+      "case": {"multiplier": 4, "target_unit": "Can", "rule_id": "CR_SKU002_CASE", "description": "Standard distributor case: 4 cans (5L)"},
+      "carton": {"multiplier": 4, "target_unit": "Can", "rule_id": "CR_SKU002_CARTON", "description": "Standard distributor carton: 4 cans (5L)"},
+      "peti": {"multiplier": 4, "target_unit": "Can", "rule_id": "CR_SKU002_PETI", "description": "Standard carton (peti): 4 cans (5L)"},
+      "dhaba": {"multiplier": 4, "target_unit": "Can", "rule_id": "CR_SKU002_DHABA", "description": "Standard carton (dhaba): 4 cans (5L)"},
+      "dhabba": {"multiplier": 4, "target_unit": "Can", "rule_id": "CR_SKU002_DHABBA", "description": "Standard carton (dhabba): 4 cans (5L)"}
+    },
+    "SKU003": {
+      "case": {"multiplier": 96, "target_unit": "Packet", "rule_id": "CR_SKU003_CASE", "description": "Master carton: 96 packets (70g)"},
+      "carton": {"multiplier": 96, "target_unit": "Packet", "rule_id": "CR_SKU003_CARTON", "description": "Master carton: 96 packets (70g)"},
+      "peti": {"multiplier": 96, "target_unit": "Packet", "rule_id": "CR_SKU003_PETI", "description": "Master carton (peti): 96 packets (70g)"},
+      "dhaba": {"multiplier": 96, "target_unit": "Packet", "rule_id": "CR_SKU003_DHABA", "description": "Master carton (dhaba): 96 packets (70g)"},
+      "dhabba": {"multiplier": 96, "target_unit": "Packet", "rule_id": "CR_SKU003_DHABBA", "description": "Master carton (dhabba): 96 packets (70g)"}
+    },
+    "SKU004": {
+      "case": {"multiplier": 120, "target_unit": "Packet", "rule_id": "CR_SKU004_CASE", "description": "Corrugated shipper: 120 packets (100g)"},
+      "carton": {"multiplier": 120, "target_unit": "Packet", "rule_id": "CR_SKU004_CARTON", "description": "Corrugated shipper: 120 packets (100g)"},
+      "peti": {"multiplier": 120, "target_unit": "Packet", "rule_id": "CR_SKU004_PETI", "description": "Standard shipper (peti): 120 packets (100g)"},
+      "dhaba": {"multiplier": 120, "target_unit": "Packet", "rule_id": "CR_SKU004_DHABA", "description": "Standard shipper (dhaba): 120 packets (100g)"},
+      "dhabba": {"multiplier": 120, "target_unit": "Packet", "rule_id": "CR_SKU004_DHABBA", "description": "Standard shipper (dhabba): 120 packets (100g)"}
+    },
+    "SKU010": {
+      "case": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU010_CASE", "description": "Beverage crate/case: 48 bottles (750ml)"},
+      "carton": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU010_CARTON", "description": "Beverage crate/case: 48 bottles (750ml)"},
+      "peti": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU010_PETI", "description": "Beverage crate/carton (peti): 48 bottles (750ml)"},
+      "dhaba": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU010_DHABA", "description": "Beverage crate/carton (dhaba): 48 bottles (750ml)"},
+      "dhabba": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU010_DHABBA", "description": "Beverage crate/carton (dhabba): 48 bottles (750ml)"}
+    },
+    "SKU011": {
+      "case": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU011_CASE", "description": "Beverage crate/case: 48 bottles (750ml)"},
+      "carton": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU011_CARTON", "description": "Beverage crate/case: 48 bottles (750ml)"},
+      "peti": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU011_PETI", "description": "Beverage crate/carton (peti): 48 bottles (750ml)"},
+      "dhaba": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU011_DHABA", "description": "Beverage crate/carton (dhaba): 48 bottles (750ml)"},
+      "dhabba": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_SKU011_DHABBA", "description": "Beverage crate/carton (dhabba): 48 bottles (750ml)"}
+    }
+  },
+  "store_specific_rules": {
+    "STORE003": {
+      "SKU010": {
+        "peti": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_STORE003_PETI_COKE", "description": "Verified store agreement: STORE003 1 peti Coke = 48 bottles (case)"},
+        "dhaba": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_STORE003_DHABA_COKE", "description": "Verified store agreement: STORE003 1 dhaba Coke = 48 bottles (carton)"},
+        "dhabba": {"multiplier": 48, "target_unit": "Bottle", "rule_id": "CR_STORE003_DHABBA_COKE", "description": "Verified store agreement: STORE003 1 dhabba Coke = 48 bottles (carton)"}
+      }
+    },
+    "STORE004": {
+      "SKU001": {
+        "peti": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_STORE004_PETI_OIL1L", "description": "Verified store agreement: STORE004 1 peti Fortune 1L = 12 bottles"},
+        "dhaba": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_STORE004_DHABA_OIL1L", "description": "Verified store agreement: STORE004 1 dhaba Fortune 1L = 12 bottles (carton)"},
+        "dhabba": {"multiplier": 12, "target_unit": "Bottle", "rule_id": "CR_STORE004_DHABBA_OIL1L", "description": "Verified store agreement: STORE004 1 dhabba Fortune 1L = 12 bottles (carton)"}
+      }
+    }
+  }
+}
